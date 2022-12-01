@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# cowvin
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+O pacote cowvin implementa list comprehension em R utilizando for loop.
+
+## Instalação do cowvin
+
+Como instalar o pacote cowvin:
+
+``` r
+library(remotes)
+remotes::install_github("gabrielpereira12345/cowvin")
+```
+
+## Exemplo
+
+Utilizando list_comprehension para tomar o quadrado de números pares:
+
+```{r example}
+library(cowvin)
+
+list_comprehension(for(i in 1:10) if(i %% 2  == 0) i*i)
+```
+
+Split em strings
+
+```{r}
+list_comprehension(for(i in c("bata}ta", "cano}ura", "cara}melo")) strsplit(i, "}")[[1]][[1]])
+```
+
